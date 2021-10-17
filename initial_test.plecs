@@ -1,0 +1,812 @@
+Plecs {
+  Name          "initial_test"
+  Version       "4.5"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenInliningExceptions "AAAACwAAAAAEAAAAEgBiAHUAYwBrAF8AZAB1AHQAeQAAAA4AY"
+"gB1AGMAawBfAGUAbgAAAA4AYgByAGQAZwBfAGUAbgAAABYAYgByAGkAZABnAGUAXwBkAHUAdAB5"
+  CodeGenFloatingPointFormat "1"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "TI2837xS"
+  CodeGenTargetSettings "AAAAfwAAAAAlUU1hcDxRU3RyaW5nLFFNYXA8UVN0cmluZyxRU3Rya"
+"W5nPiA+AAAAAAEAAAAQAFQASQAyADgAMwA3AHgAUwAAAA8AAAASAHUAcwBlAEkAbgB0AE8AcwBjAA"
+"AAAgAxAAAAGAB1AG4AaQBmAGwAYQBzAGgARgBpAGwAZQAAAAAAAAAWAHQAYQBzAGsARgByAGUAcQB"
+"UAG8AbAAAAAIAMQAAABIAcwB5AHMAQwBsAGsATQBIAHoAAAAGADEAOQAwAAAAFABpAG4AcwB0AGEA"
+"bABsAEQAaQByAAAAAAAAAA4AZwBlAG4ATwBuAGwAeQAAAAIAMgAAABwAZQB4AHQATQBvAGQAZQBTA"
+"GMAaQBQAGkAbgBzAAAADgBbADIAOAAsADIAOQBdAAAAIgBlAHgAdABNAG8AZABlAEIAdQBmAGYAZQ"
+"ByAFMAaQB6AGUAAAAIADEAMAAwADAAAAASAGUAeAB0AEMAbABrAE0ASAB6AAAABAAzADAAAAAIAGM"
+"AaABpAHAAAAACADEAAAAWAGIAdQBpAGwAZABDAG8AbgBmAGkAZwAAAAIAMQAAAAoAYgBvAGEAcgBk"
+"AAAAAgAzAAAAGgBUAEEAUgBHAEUAVABfAEQARQBWAEkAQwBF/////wAAACIATABpAG4AawBlAHIAQ"
+"wBvAG0AbQBhAG4AZABGAGkAbABlAAAAAAAAABoARQBYAFQARQBSAE4AQQBMAF8ATQBPAEQARQAAAA"
+"IAMQ=="
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings "AAAAfwAAAAAWUU1hcDxRU3RyaW5nLFFTdHJpbmc+AAAAAAYAAAAYAF"
+"QAcgBpAGcAZwBlAHIAVgBhAGwAdQBlAAAAAgAwAAAAGABUAHIAaQBnAGcAZQByAEQAZQBsAGEAeQA"
+"AAAIAMAAAABYAUwBlAG4AcwBpAHQAaQB2AGkAdAB5AAAAAgAwAAAAFgBSAGUAZgByAGUAcwBoAFIA"
+"YQB0AGUAAAAEADIAMAAAABQATgB1AG0AUwBhAG0AcABsAGUAcwAAAAgAOAAxADkAMgAAABQARABlA"
+"GMAaQBtAGEAdABpAG8AbgAAAAIAMQ=="
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Terminal {
+    Type          Output
+    Index         "1"
+  }
+  Terminal {
+    Type          Output
+    Index         "2"
+  }
+  Terminal {
+    Type          Output
+    Index         "3"
+  }
+  Terminal {
+    Type          Input
+    Index         "1"
+  }
+  Terminal {
+    Type          Input
+    Index         "2"
+  }
+  Terminal {
+    Type          Input
+    Index         "3"
+  }
+  Terminal {
+    Type          Output
+    Index         "4"
+  }
+  Schematic {
+    Location      [631, 359; 1880, 1176]
+    ZoomFactor    1.30957
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/PWM"
+      Name          "buck_pwm_b (62)"
+      Show          on
+      Position      [330, 130]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -25; 25, 25]
+      LabelPosition [0, 28]
+      LabelAlign    up
+      Parameter {
+        Variable      "pwm"
+        Value         "[8]"
+        Show          off
+      }
+      Parameter {
+        Variable      "type"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "fc"
+        Value         "10e3"
+        Show          off
+      }
+      Parameter {
+        Variable      "fc_tol"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "outmode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "delay"
+        Value         "0.1e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "polarity"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "sequence"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "show_enable"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "socsel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "socsel_prd"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "intsel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "intsel_prd"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "tz1mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "tz2mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "tz3mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          EventOutput
+        Position      [29, 15]
+        Direction     right
+      }
+      Terminal {
+        Type          EventOutput
+        Position      [29, -15]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, -10]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "buck_duty"
+      Show          on
+      Position      [205, 130]
+      Direction     right
+      Flipped       off
+      Frame         [-15, -10; 15, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      Parameter {
+        Variable      "Value"
+        Value         "0.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/Digital Out"
+      Name          "buck_en_chb (1)"
+      Show          on
+      Position      [335, 225]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -20; 25, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "gpio"
+        Value         "35"
+        Show          on
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "2"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 0]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "buck_en"
+      Show          on
+      Position      [200, 225]
+      Direction     right
+      Flipped       off
+      Frame         [-10, -10; 10, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/Digital Out"
+      Name          "brgd_en_chb (8)"
+      Show          on
+      Position      [340, 315]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -20; 25, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "gpio"
+        Value         "63"
+        Show          on
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "3"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 0]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "brdg_en"
+      Show          on
+      Position      [200, 315]
+      Direction     right
+      Flipped       off
+      Frame         [-10, -10; 10, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/Digital In"
+      Name          "buck_state_chb (3)"
+      Show          on
+      Position      [250, 410]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -20; 25, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "gpio"
+        Value         "37"
+        Show          on
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope6"
+      Show          on
+      Position      [330, 410]
+      Direction     up
+      Flipped       off
+      Location      [1388, 465; 1738, 758]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAAEKAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
+"gAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAQAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAA"
+"AAZAAAAAcAAABkAAAAsQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACNAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/Digital In"
+      Name          "legb_chb_state (6)"
+      Show          on
+      Position      [250, 490]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -20; 25, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "gpio"
+        Value         "61"
+        Show          on
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "2"
+        Show          off
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope7"
+      Show          on
+      Position      [330, 490]
+      Direction     up
+      Flipped       off
+      Location      [1978, 360; 2328, 653]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAAEKAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
+"wAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAAsQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACNAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/Digital In"
+      Name          "lega_chb_state (10)"
+      Show          on
+      Position      [250, 565]
+      Direction     up
+      Flipped       off
+      Frame         [-25, -20; 25, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "gpio"
+        Value         "65"
+        Show          on
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "3"
+        Show          off
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope2"
+      Show          on
+      Position      [325, 565]
+      Direction     up
+      Flipped       off
+      Location      [2210, 295; 2560, 588]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAAEKAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
+"wAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAAsQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACNAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "TIC2000_Lib/PWM (Variable)"
+      Name          "chb_brgd (54)"
+      Show          on
+      Position      [575, 200]
+      Direction     up
+      Flipped       off
+      Frame         [-35, -25; 35, 25]
+      LabelPosition [0, 28]
+      LabelAlign    up
+      Parameter {
+        Variable      "num_pwm"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "pwm_3"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "pwm_2"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "pwm_1"
+        Value         "2"
+        Show          on
+      }
+      Parameter {
+        Variable      "type"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "fc"
+        Value         "10e3"
+        Show          off
+      }
+      Parameter {
+        Variable      "fc_tol"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "delay"
+        Value         "0.1e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "polarity"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "fvar"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "sync_src"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "socsel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "socsel_prd"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "intsel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "intsel_prd"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "tz1mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "tz2mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "tz3mode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "TargetPortIndices"
+        Value         "4"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-35, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          EventOutput
+        Position      [39, 15]
+        Direction     right
+      }
+      Terminal {
+        Type          EventOutput
+        Position      [39, -15]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-35, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          EventOutput
+        Position      [39, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          EventInput
+        Position      [0, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [-35, 0]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "bridge_duty"
+      Show          on
+      Position      [470, 190]
+      Direction     right
+      Flipped       off
+      Frame         [-25, -10; 25, 10]
+      LabelPosition [0, 13]
+      LabelAlign    up
+      Parameter {
+        Variable      "Value"
+        Value         "0.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "buck_duty"
+      SrcTerminal   1
+      DstComponent  "buck_pwm_b (62)"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "buck_en"
+      SrcTerminal   1
+      DstComponent  "buck_en_chb (1)"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "brdg_en"
+      SrcTerminal   1
+      DstComponent  "brgd_en_chb (8)"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "buck_state_chb (3)"
+      SrcTerminal   1
+      DstComponent  "Scope6"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "legb_chb_state (6)"
+      SrcTerminal   1
+      DstComponent  "Scope7"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "lega_chb_state (10)"
+      SrcTerminal   1
+      DstComponent  "Scope2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "bridge_duty"
+      SrcTerminal   1
+      DstComponent  "chb_brgd (54)"
+      DstTerminal   1
+    }
+  }
+}
