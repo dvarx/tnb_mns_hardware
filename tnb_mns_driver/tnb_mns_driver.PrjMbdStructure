@@ -1,3 +1,4 @@
+Record=TopLevelDocument|FileName=main_assembly.MbaDoc
 Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=..\tnb_mns_control\tnb_mns_control.PrjPcb
 Record=SubProject|SourceDocument=top.MbsDoc|ProjectPath=..\tnb_mns_control\tnb_mns_control.PrjPcb
 Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=tnb_mns_pow|Source=..\tnb_mns_power\tnb_mns_power.PrjPcb
