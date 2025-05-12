@@ -1,0 +1,9 @@
+Record=TopLevelDocument|FileName=main_assembly.MbaDoc
+Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=..\mdriver_control\mdriver_control.PrjPcb
+Record=SubProject|SourceDocument=top.MbsDoc|ProjectPath=..\mdriver_control\mdriver_control.PrjPcb
+Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=tnb_mns_pow|Source=..\mdriver_power\mdriver_power.PrjPcb
+Record=SubProject|SourceDocument=top.MbsDoc|ProjectPath=..\mdriver_power\mdriver_power.PrjPcb
+Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=2|Source=..\mdriver_slave\mdriver_slave.PrjPcb
+Record=SubProject|SourceDocument=top.MbsDoc|ProjectPath=..\mdriver_slave\mdriver_slave.PrjPcb
+Record=DiagramHierarchy|SourceDocument=top.MbsDoc|Kind=Multi-board Schematic Module|Designator=3|Source=..\reed_cap_bank_switch\cap_bank_switcher.PrjPcb
+Record=SubProject|SourceDocument=top.MbsDoc|ProjectPath=..\reed_cap_bank_switch\cap_bank_switcher.PrjPcb
